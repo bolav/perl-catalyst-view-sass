@@ -11,4 +11,4 @@ my $view = 'Pkgconfig';
 
 my $response;
 ok(($response = request("/test?view=$view"))->is_success, 'request ok');
-is($response->content, ".error {\n  color: #FF0000;\n}\n\n#header {\n  background: #FFFFFF   ;\n}\n", 'message ok');
+is($response->content, "#header {\n  background: #FFFFFF   ;\n}\n\n#header .error {\n  color: #FF0000;\n}\n", 'message ok');
